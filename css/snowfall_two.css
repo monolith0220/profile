@@ -1,0 +1,97 @@
+.snow-fall .snowflake {
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  background: url(../images/snow.png) no-repeat;
+  background-size: cover;
+  
+  opacity: 0;
+  transform-origin: 0 0;
+  animation-name: snowfall;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+/*雪をどの辺りに表示するか*/
+.snowflake1 {
+  animation-duration: 6.4s;
+  left: 5%;
+}
+
+.snowflake2 {
+  animation-delay: 0.3s;
+  animation-duration: 6.7s;
+  left: 19%;
+}
+
+.snowflake3 {
+  animation-delay: 0.5s;
+  animation-duration: 6.9s;
+  left: 28%;
+}
+
+.snowflake4 {
+  animation-delay: 0s;
+  animation-duration: 6.6s;
+  left: 38%;
+}
+
+.snowflake5 {
+  animation-delay: 1s;
+  animation-duration: 6.6s;
+  left: 50%;
+}
+
+.snowflake6 {
+  animation-delay: 1.2s;
+  animation-duration: 6.2s;
+  left: 60%;
+}
+
+.snowflake7 {
+  animation-delay: 1.2s;
+  animation-duration: 6.7s;
+  left: 80%;
+}
+
+/*アニメーションの設定*/
+@keyframes snowfall {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg);
+    transform: translateY(0px);
+  }
+
+  50% {
+    opacity: 1;
+    transform: rotate(180deg);
+    transform: translateY(850px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(360deg);
+    transform: translateY(1700px);
+  }
+}
+
+/* @keyframes r1 {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} */
+
+/* レスポンシブ */
+@media screen and (max-width: 768px) {
+  .snow-fall .snowflake {
+		width: 70px;
+		height: 70px;
+	}
+
+  .snowflake2,
+	.snowflake4,
+	.snowflake6 {
+		display: none;
+	}
+
+}
